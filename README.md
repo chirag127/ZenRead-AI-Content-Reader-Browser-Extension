@@ -1,152 +1,256 @@
-# ZenRead: AI-Powered Distraction-Free Reader Browser Extension
+# ZenRead-AI-Reader-And-TTS-Browser-Extension
 
-> The ultimate tool for focused, intelligent content consumption on the web. Leverage Gemini AI to transform cluttered pages into clean, summarized, and acoustically accessible content streams.
+<!-- Hero Banner/Logo Placeholder: Add your project's distinct visual identity here. -->
+<p align="center">
+  <img src="https://raw.githubusercontent.com/chirag127/ZenRead-AI-Reader-And-TTS-Browser-Extension/main/assets/zenread-logo.png" alt="ZenRead Logo" width="200"/>
+</p>
 
 <p align="center">
-  <a href="https://github.com/chirag127/ZenRead-AI-Powered-Distraction-Free-Reader-Browser-Extension/actions/workflows/ci.yml" target="_blank">
-    <img alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/chirag127/ZenRead-AI-Powered-Distraction-Free-Reader-Browser-Extension/ci.yml?branch=main&style=flat-square&label=CI%20Build" />
+  <!-- Build Status -->
+  <a href="https://github.com/chirag127/ZenRead-AI-Reader-And-TTS-Browser-Extension/actions/workflows/ci.yml">
+    <img src="https://img.shields.io/github/actions/workflow/status/chirag127/ZenRead-AI-Reader-And-TTS-Browser-Extension/ci.yml?branch=main&style=flat-square" alt="Build Status">
   </a>
-  <a href="https://github.com/chirag127/ZenRead-AI-Powered-Distraction-Free-Reader-Browser-Extension/blob/main/LICENSE" target="_blank">
-    <img alt="License" src="https://img.shields.io/badge/License-CC%20BY--NC%204.0-blue.svg?style=flat-square" />
+  <!-- Code Coverage (Placeholder - requires setup) -->
+  <a href="https://codecov.io/gh/chirag127/ZenRead-AI-Reader-And-TTS-Browser-Extension">
+    <img src="https://img.shields.io/codecov/c/github/chirag127/ZenRead-AI-Reader-And-TTS-Browser-Extension?style=flat-square&token=YOUR_CODECOV_TOKEN" alt="Code Coverage">
   </a>
-  <a href="https://github.com/chirag127/ZenRead-AI-Powered-Distraction-Free-Reader-Browser-Extension" target="_blank">
-    <img alt="Stars" src="https://img.shields.io/github/stars/chirag127/ZenRead-AI-Powered-Distraction-Free-Reader-Browser-Extension?style=flat-square&label=Stars&color=yellow" />
+  <!-- Tech Stack: JavaScript, Browser Extension -->
+  <img src="https://img.shields.io/badge/Tech-JavaScript%20%7C%20WebExtension%20%7C%20Gemini%20AI-blueviolet?style=flat-square" alt="Tech Stack">
+  <!-- Lint/Format: Biome -->
+  <img src="https://img.shields.io/badge/Code%20Quality-Biome-brightgreen?style=flat-square" alt="Biome">
+  <!-- License -->
+  <a href="https://github.com/chirag127/ZenRead-AI-Reader-And-TTS-Browser-Extension/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey?style=flat-square" alt="License">
   </a>
-  <img alt="Tech Stack" src="https://img.shields.io/badge/Stack-WXT%20%7C%20JS%20%7C%20AI-209E61.svg?style=flat-square" />
-  <img alt="Linting" src="https://img.shields.io/badge/Linter-Biome-60A5FA.svg?style=flat-square" />
-  <a href="https://www.codecov.io/gh/chirag127/ZenRead-AI-Powered-Distraction-Free-Reader-Browser-Extension" target="_blank">
-    <img alt="Coverage" src="https://img.shields.io/codecov/c/github/chirag127/ZenRead-AI-Powered-Distraction-Free-Reader-Browser-Extension?style=flat-square&token=YOUR_TOKEN_HERE" />
+  <!-- GitHub Stars -->
+  <a href="https://github.com/chirag127/ZenRead-AI-Reader-And-TTS-Browser-Extension/stargazers">
+    <img src="https://img.shields.io/github/stars/chirag127/ZenRead-AI-Reader-And-TTS-Browser-Extension?style=flat-square&colorA=DD2476&colorB=FF69B4&label=Stars" alt="GitHub Stars">
   </a>
 </p>
 
-***
-
 <p align="center">
-  <a href="https://github.com/chirag127/ZenRead-AI-Powered-Distraction-Free-Reader-Browser-Extension">
-    <img src="https://img.shields.io/badge/⭐%20Star%20this%20Repo-Support%20Open%20Source-ff69b4.svg?style=for-the-badge&logo=github" alt="Star this Repository" />
-  </a>
+  Star ⭐ this Repo
 </p>
 
-ZenRead transforms cluttered web pages into clean, highly readable, and acoustically accessible content streams. Leveraging the power of Google Gemini AI, it not only removes distractions but also intelligently summarizes, translates, and processes text, ensuring absolute focus and maximum comprehension.
+ZenRead is a cutting-edge, privacy-focused browser extension engineered to transform your online reading experience. It integrates AI-powered reader mode, advanced text-to-speech capabilities, and Gemini AI-driven summaries directly within your browser, ensuring no data leaves your device.
 
-## 🚀 Key Features
+## Table of Contents
 
-*   **One-Click Zen Mode:** Instantaneously strips away advertisements, pop-ups, and extraneous UI elements.
-*   **AI Contextual Summary:** Uses Gemini 1.5 Pro to generate a concise summary of the extracted article content.
-*   **Seamless Text-to-Speech (TTS):** High-quality, native voice synthesis for auditory learning.
-*   **Cross-Browser Compatibility:** Built using WXT for rapid deployment across Chrome, Firefox, and Edge.
-*   **Privacy-Focused:** Content processing happens locally where possible, with explicit AI consent.
+- [ZenRead-AI-Reader-And-TTS-Browser-Extension](#zenread-ai-reader-and-tts-browser-extension)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Architecture Overview](#architecture-overview)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Development Setup](#development-setup)
+  - [Project Structure](#project-structure)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Security](#security)
+  - [AI Agent Directives: Operational Protocol (ZenRead Edition)](#ai-agent-directives-operational-protocol-zenread-edition)
 
-## 🏛️ Architecture Overview
+## Features
 
-ZenRead utilizes the **Feature-Sliced Design (FSD)** methodology, which is ideal for isolating extension components (e.g., popup, content script, background service) into highly cohesive, domain-specific layers.
+*   **AI-Powered Reader Mode:** Cleans up web pages, removing distractions and ads for a focused reading experience.
+*   **Advanced Text-to-Speech (TTS):** Converts article content into natural-sounding audio, supporting multiple languages and voices.
+*   **Gemini AI Summarization:** Get concise, AI-generated summaries of lengthy articles without sending your data to external servers.
+*   **Privacy-First Design:** All processing (reader mode, TTS, summarization) happens locally in your browser; no servers, no tracking, no data collection.
+*   **Cross-Browser Compatibility:** Supports Chrome, Firefox, and other Chromium-based browsers.
+*   **Customizable Settings:** Personalize fonts, themes, TTS voices, and summarization depth.
 
-mermaid
-graph TD
-    A[User Action: Click ZenRead Icon] --> B(Content Script: DOM Extraction);
-    B --> C{Background Service Worker};
-    C --> D(Module: Text Cleaning & Serialization);
-    C --> E(Module: Gemini AI API Integration);
-    E --> F(AI Summary & Processing);
-    F --> G(Module: State Management (e.g., Zustand/Chrome Storage));
-    G --> H(Popup/Sidebar UI Update);
-    C --> I(Module: TTS Synthesis & Playback);
+## Architecture Overview
+
+ZenRead operates as a robust browser extension, meticulously designed to provide powerful features without compromising user privacy. Its architecture is composed of several key components:
+
+*   **Background Script:** Manages core logic, API interactions (Gemini AI, Text-to-Speech), and communication with other parts of the extension. It acts as the central orchestrator.
+*   **Content Scripts:** Injected directly into web pages to manipulate the DOM for reader mode and capture text for TTS/summarization. Operates with isolated worlds for security.
+*   **Popup UI:** The user-facing interface that provides quick access to features, settings, and controls.
+*   **Options Page:** A dedicated page for more extensive configuration and customization of ZenRead's behavior.
+*   **Local Storage:** Utilized for storing user preferences and settings securely on the client-side, reinforcing the privacy-first approach.
+
+## Installation
+
+### For Users (Coming Soon)
+
+ZenRead will soon be available on the Chrome Web Store and Firefox Add-ons. Stay tuned for direct links.
+
+### For Developers
+
+1.  **Clone the repository:**
+    bash
+    git clone https://github.com/chirag127/ZenRead-AI-Reader-And-TTS-Browser-Extension.git
+    cd ZenRead-AI-Reader-And-TTS-Browser-Extension
+    
+2.  **Install dependencies:**
+    bash
+    npm install # or yarn install or pnpm install
+    
+3.  **Load the extension in your browser:**
+    *   **Chrome/Brave/Edge:**
+        1.  Navigate to `chrome://extensions`.
+        2.  Enable "Developer mode" in the top right.
+        3.  Click "Load unpacked" and select the `dist` directory (after running `npm run build`).
+    *   **Firefox:**
+        1.  Navigate to `about:debugging#/runtime/this-firefox`.
+        2.  Click "Load Temporary Add-on..." and select any file within the `dist` directory (after running `npm run build`).
+
+## Usage
+
+1.  **Activate Reader Mode:** Click the ZenRead icon in your browser toolbar on an article page to toggle reader mode.
+2.  **Text-to-Speech:** While in reader mode, use the controls in the popup to initiate text-to-speech playback.
+3.  **Summarize:** On a supported page, click the ZenRead icon and select the "Summarize" option to get a Gemini AI-powered summary.
+4.  **Settings:** Access the options page to customize ZenRead's behavior, including default voices, themes, and summarization preferences.
+
+## Development Setup
+
+ZenRead uses a modern JavaScript toolchain for efficient development.
+
+*   **Technologies:** JavaScript (ES2022+), WXT, Vite 7, TailwindCSS v4, Google Gemini API.
+*   **Linting & Formatting:** Biome
+*   **Testing:** Vitest (Unit/Integration), Playwright (E2E)
+
+### Available Scripts
+
+| Script              | Description                                                                 |
+| :------------------ | :-------------------------------------------------------------------------- |
+| `npm run dev`       | Starts the development server with hot-reloading for extension components.  |
+| `npm run build`     | Compiles and bundles the extension for production deployment.               |
+| `npm run lint`      | Runs Biome linter and formatter to check code quality.                      |
+| `npm run lint:fix`  | Runs Biome to automatically fix linting and formatting issues.              |
+| `npm run test`      | Executes all unit and integration tests with Vitest.                       |
+| `npm run test:e2e`  | Runs end-to-end tests across browsers using Playwright.                     |
+| `npm run typecheck` | Checks TypeScript files for type errors (if TypeScript is enabled).         |
+| `npm run clean`     | Removes build artifacts and temporary files.                                |
+
+## Project Structure
 
 
-## 📖 Table of Contents
+ZenRead-AI-Reader-And-TTS-Browser-Extension/
+├── .github/                       # GitHub workflow configurations, templates
+├── public/                        # Static assets for the extension
+├── src/                           # Source code for the extension
+│   ├── background/                # Background script logic
+│   ├── content-scripts/           # Scripts injected into web pages
+│   ├── popup/                     # Popup UI and logic
+│   ├── options/                   # Options page UI and logic
+│   ├── api/                       # Gemini AI and TTS API integrations
+│   ├── components/                # Reusable UI components
+│   ├── services/                  # Core services (e.g., reader mode, summarizer)
+│   └── utils/                     # Utility functions
+├── assets/                        # Images, logos, etc. for documentation
+├── .gitignore                     # Files/directories to ignore in Git
+├── .prettierignore                # Files/directories to ignore in Prettier
+├── biome.json                     # Biome configuration
+├── package.json                   # Project dependencies and scripts
+├── tsconfig.json                  # TypeScript configuration
+├── vite.config.ts                 # Vite bundler configuration
+├── wxt.config.ts                  # WXT (Web Extension Toolkit) configuration
+├── README.md                      # This README file
+└── LICENSE                        # Project license
 
-1.  [🚀 Key Features](#-key-features)
-2.  [🏛️ Architecture Overview](#-architecture-overview)
-3.  [🤖 AI Agent Directives (System SSOT)](#-ai-agent-directives-system-ssot)
-4.  [💻 Development Setup](#-development-setup)
-5.  [📜 Scripts and Commands](#-scripts-and-commands)
-6.  [🌐 Principles & Standards](#-principles--standards)
-7.  [🤝 Contributing](#-contributing)
-8.  [© License](#-license)
 
-## 🤖 AI Agent Directives (System SSOT)
+## Contributing
+
+We welcome contributions to ZenRead! Please see our [CONTRIBUTING.md](https://github.com/chirag127/ZenRead-AI-Reader-And-TTS-Browser-Extension/blob/main/.github/CONTRIBUTING.md) for guidelines on how to get started, including information on setting up your development environment, submitting pull requests, and coding standards.
+
+## License
+
+This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) License. See the [LICENSE](https://github.com/chirag127/ZenRead-AI-Reader-And-TTS-Browser-Extension/blob/main/LICENSE) file for details.
+
+## Security
+
+Your security is our top priority. For information on reporting vulnerabilities or our security practices, please refer to our [SECURITY.md](https://github.com/chirag127/ZenRead-AI-Reader-And-TTS-Browser-Extension/blob/main/.github/SECURITY.md) file.
 
 <details>
-<summary>⚡ APEX LATE 2025 ENGINEERING STANDARDS & DIRECTIVES</summary>
+<summary><h2>🤖 AI AGENT DIRECTIVES: OPERATIONAL PROTOCOL (ZENREAD EDITION)</h2></summary>
 
-### Identity & Context
-This repository, `ZenRead-AI-Powered-Distraction-Free-Reader-Browser-Extension`, is a critical, privacy-focused browser extension utilizing JavaScript, the WXT framework, and Google Gemini APIs. All code generation and refactoring MUST adhere to maximum performance and minimal memory footprint, essential for browser extensions.
+# SYSTEM: APEX TECHNICAL AUTHORITY & ELITE ARCHITECT (DECEMBER 2025 EDITION)
 
-### Apex Toolchain (2026 Standard)
-| Tool | Purpose | Directive |
-| :--- | :--- | :--- |
-| **WXT Framework** | Extension Scaffolding/Vite Integration | Utilize Manifest V3, optimize background service worker execution models. |
-| **Biome** | Linter/Formatter/JS Checker | Enforcement of absolute code style consistency (`biome check --apply`). |
-| **Vitest** | Unit & Integration Testing | Target 100% coverage on all content extraction and AI prompt modules. |
-| **TypeScript (Migration Path)** | Static Type Safety | All new modules MUST be written in strict TypeScript. Refactor legacy JS files incrementally. |
-| **Node.js (LTS)** | Runtime Environment | Use Node v20+ for development and CI/CD pipelines. |
+## 1. IDENTITY & PRIME DIRECTIVE
+**Role:** You are a Senior Principal Software Architect and Master Technical Copywriter with **40+ years of elite industry experience**. You operate with absolute precision, enforcing FAANG-level standards and the wisdom of "Managing the Unmanageable."
+**Context:** Current Date is **December 2025**. You are building for the 2026 standard.
+**Output Standard:** Deliver **EXECUTION-ONLY** results. No plans, no "reporting"—only executed code, updated docs, and applied fixes.
+**Philosophy:** "Zero-Defect, High-Velocity, Future-Proof."
 
-### Architectural Enforcement
-1.  **Feature-Sliced Design (FSD):** Strictly enforce FSD principles. Components must be atomic, reusable, and separated by scope (app/pages/widgets/features/entities/shared). No imports between features in a horizontal manner (Feature A importing from Feature B).
-2.  **SOLID & DRY:** Maximize modularity. The AI interaction layer (`src/features/ai-processing`) must be decoupled from the UI/Content Script layers via message passing.
-3.  **Content Script Isolation:** Content scripts must be lean, focusing only on DOM manipulation and extraction, delegating heavy computation (AI/TTS processing) to the Background Service Worker via Chrome Message Passing API.
+---
 
-### Verification and Delivery
-| Command | Description | Purpose |
-| :--- | :--- | :--- |
-| `npm run build` | Generates distributable package. | MUST complete with zero warnings. |
-| `npm run lint:check` | Runs Biome checks. | MUST pass clean before any commit. |
-| `npm run test` | Executes Vitest unit tests. | Maintain minimum 95% line coverage. |
-| `npm run check:types` | Runs TSC compiler checks. | Ensures TypeScript integrity during JS refactoring. |
+## 2. INPUT PROCESSING & COGNITION
+*   **SPEECH-TO-TEXT INTERPRETATION PROTOCOL:**
+    *   **Context:** User inputs may contain phonetic errors (homophones, typos).
+    *   **Semantic Correction:** **STRICTLY FORBIDDEN** from executing literal typos. You must **INFER** technical intent based on the project context.
+    *   **Logic Anchor:** Treat the `README.md` as the **Single Source of Truth (SSOT)**.
+*   **MANDATORY MCP INSTRUMENTATION:**
+    *   **No Guessing:** Do not hallucinate APIs.
+    *   **Research First:** Use `linkup`/`brave` to search for **December 2025 Industry Standards**, **Security Threats**, and **2026 UI Trends**.
+    *   **Validation:** Use `docfork` to verify *every* external API signature.
+    *   **Reasoning:** Engage `clear-thought-two` to architect complex flows *before* writing code.
 
+---
+
+## 3. CONTEXT-AWARE APEX TECH STACKS (LATE 2025 STANDARDS)
+**Directives:** This project is a JavaScript-based Browser Extension.
+
+*   **PRIMARY SCENARIO: WEB / APP / EXTENSION (JavaScript/TypeScript)**
+    *   **Stack:** This project leverages **JavaScript (ES2022+)** for maximum browser compatibility and performance. Key tools include **WXT** (for Web Extension development, build process, and cross-browser compatibility), **Vite 7** (for lightning-fast development server and optimized builds), and **TailwindCSS v4** (for utility-first styling). **TypeScript (Strict mode)** is employed for enhanced type safety and maintainability.
+    *   **Lint/Test:** **Biome** (for ultra-fast linting and formatting), **Vitest** (for unit and integration testing of JavaScript modules), and **Playwright** (for robust end-to-end testing of extension functionality across different browsers).
+    *   **Architecture:** Adheres to a **Browser Extension Architecture** with clear separation between background scripts, content scripts, popup UIs, and options pages. Emphasizes message passing for secure inter-component communication. Follows **Feature-Sliced Design (FSD)** principles where applicable for complex UI/feature organization, and **SOLID/DRY** principles for core logic.
+    *   **AI Integration:** Deeply integrated with **Google Gemini API** (`gemini-3-pro` by default) for intelligent text summarization. Prioritize modular design, clear API contracts, and robust error handling for all AI model interactions, ensuring privacy by keeping processing client-side where possible.
+    *   **State Management:** Utilizes modern JavaScript patterns (e.g., Signals, or lightweight reactivity libraries) for efficient state management within the popup and options pages.
+
+*   **SECONDARY SCENARIO B: SYSTEMS / PERFORMANCE (Rust/Go) - *Not applicable for this project's primary function. Reference only for potential future native integrations.***
+    *   **Stack:** Rust (Cargo) or Go (Modules).
+    *   **Lint:** Clippy / GolangCI-Lint.
+    *   **Architecture:** Hexagonal Architecture (Ports & Adapters).
+
+*   **SECONDARY SCENARIO C: DATA / AI / SCRIPTS (Python) - *Not applicable for this project. Reference only for potential future backend services.***
+    *   **Stack:** uv (Manager), Ruff (Linter), Pytest (Test).
+    *   **Architecture:** Modular Monolith or Microservices.
+
+---
+
+## 4. ARCHITECTURAL PATTERNS & PRINCIPLES
+*   **Browser Extension Architecture:**
+    *   **Background Script:** Centralized event handling, API calls, message dispatch.
+    *   **Content Scripts:** DOM manipulation, direct page interaction. Isolated from the page's JS context.
+    *   **Popup/Options Pages:** User interaction, settings management.
+    *   **Message Passing:** Strict communication between components using `chrome.runtime.sendMessage` and `chrome.runtime.onMessage` for secure data exchange.
+*   **SOLID Principles:**
+    *   **Single Responsibility Principle (SRP):** Each module, function, or component should have only one reason to change (e.g., `readerModeProcessor.js`, `ttsService.js`, `geminiSummarizer.js`).
+    *   **Open/Closed Principle (OCP):** Software entities should be open for extension but closed for modification (e.g., using configuration objects for new AI models).
+    *   **Liskov Substitution Principle (LSP):** Subtypes must be substitutable for their base types without altering the correctness of the program (critical for future AI model or TTS engine swaps).
+    *   **Interface Segregation Principle (ISP):** Clients should not be forced to depend on interfaces they do not use (e.g., specific message types for specific functionalities).
+    *   **Dependency Inversion Principle (DIP):** Depend on abstractions, not concretions (e.g., defining an `ITextToSpeechService` interface).
+*   **DRY (Don't Repeat Yourself):** Avoid redundant code. Abstract common functionalities into reusable modules (e.g., utility functions, shared configuration).
+*   **YAGNI (You Ain't Gonna Need It):** Implement only features that are currently required. Avoid over-engineering for speculative future needs.
+*   **Test-Driven Development (TDD):** Write tests before writing the code to ensure functionality and robustness.
+*   **Atomic Commits:** Each commit should represent a single, complete logical change.
+
+---
+
+## 5. DEVELOPMENT WORKFLOW & VERIFICATION COMMANDS
+*   **Verification & Testing:**
+    *   **Unit Tests:** `npm run test:unit` (Vitest)
+    *   **Integration Tests:** `npm run test:integration` (Vitest)
+    *   **End-to-End (E2E) Tests:** `npm run test:e2e` (Playwright against browser environments)
+    *   **Linting & Formatting:** `npm run lint` (Biome)
+    *   **Type Checking:** `npm run typecheck` (TypeScript)
+    *   **Build Extension:** `npm run build` (WXT)
+
+*   **Standard Operating Procedures:**
+    1.  **Feature Branching:** Develop all features in dedicated branches (`feat/`, `fix/`, `chore/`).
+    2.  **Code Review:** Mandatory peer review before merging to `main`.
+    3.  **Automated Checks:** Ensure CI/CD pipelines pass (lint, test, build) before merge.
+    4.  **Documentation:** Keep `README.md`, `CONTRIBUTING.md`, and `SECURITY.md` up-to-date.
+    5.  **Performance Focus:** Prioritize efficient algorithms and minimal resource usage, especially for browser extensions.
+    6.  **Privacy by Design:** Ensure all features adhere to the "no servers, no tracking" principle.
+
+---
+
+## 6. SECURITY PROTOCOL
+*   **Content Security Policy (CSP):** Strict CSP defined in `manifest.json`.
+*   **Input Validation:** Sanitize all user inputs and messages passed between extension components.
+*   **Least Privilege:** Request only necessary permissions in `manifest.json`.
+*   **API Key Management:** API keys (e.g., Gemini) must be handled securely, ideally loaded from environment variables during development or securely managed in browser storage for client-side use. Never hardcode.
+*   **Dependency Auditing:** Regularly audit dependencies for known vulnerabilities.
+*   **Cross-Site Scripting (XSS) Prevention:** Strict DOM sanitization for any content injected into web pages.
 </details>
-
-## 💻 Development Setup
-
-This project uses `npm` and the WXT framework for development.
-
-1.  **Prerequisites:** Ensure Node.js (v20+) is installed.
-2.  **Clone the Repository:**
-    bash
-    git clone https://github.com/chirag127/ZenRead-AI-Powered-Distraction-Free-Reader-Browser-Extension.git
-    cd ZenRead-AI-Powered-Distraction-Free-Reader-Browser-Extension
-    
-3.  **Install Dependencies:**
-    bash
-    npm install
-    
-4.  **Environment Variables:** Create a `.env` file in the root directory for your AI key.
-    
-    # Required for AI Summarization Feature
-    GEMINI_API_KEY="YOUR_GEMINI_KEY"
-    
-5.  **Start Development Mode:**
-    bash
-    npm run dev
-    # Loads the extension into the browser for hot-reloading.
-    
-
-## 📜 Scripts and Commands
-
-| Script | Command | Description |
-| :--- | :--- | :--- |
-| `dev` | `wxt:dev` | Starts the development server for hot module reloading. |
-| `build` | `wxt build` | Compiles the production-ready extension bundle. |
-| `lint` | `biome lint .` | Executes Biome linting checks. |
-| `format` | `biome format .` | Auto-formats code using Biome standards. |
-| `test` | `vitest` | Runs all unit and integration tests (coverage recommended). |
-| `clean` | `rm -rf .output && rm -rf node_modules` | Clears all built artifacts and modules. |
-
-## 🌐 Principles & Standards
-
-We strictly adhere to core architectural philosophies to ensure maintainability and scalability.
-
-*   **SOLID:** Single Responsibility Principle (especially critical for content scripts and background workers).
-*   **DRY (Don't Repeat Yourself):** All shared utilities (e.g., content cleaning algorithms) must reside in the FSD `shared` layer.
-*   **YAGNI (You Aren't Gonna Need It):** Features are implemented only when absolutely necessary, focusing on a minimal, high-utility product.
-*   **Performance First:** All DOM manipulations and data processing must be asynchronous and non-blocking.
-
-## 🤝 Contributing
-ZenRead is an open-source project managed under the Apex Standard 11 compliance mandate. Please review the following documents before submitting contributions:
-
-*   [CONTRIBUTING.md](.github/CONTRIBUTING.md) - Guidelines for code submission and architectural expectations.
-*   [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) - Our standards for respectful engagement.
-*   [SECURITY.md](.github/SECURITY.md) - Instructions for reporting vulnerabilities securely.
-
-## © License
-This project is licensed under the **Creative Commons Attribution-NonCommercial 4.0 International Public License (CC BY-NC 4.0)**.
