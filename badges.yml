@@ -1,47 +1,24 @@
-build:
-  - uses: "actions/setup-node@v4"
-  - name: "Build"
-    run: |
-      # Example build command for a browser extension
-      echo "This is a placeholder for build commands for a browser extension."
-      # Typically, you would have commands here to build your extension artifacts.
-      # For example: npm run build
-      # Or if using a specific bundler like Webpack, Rollup, or Vite:
-      # npx vite build
-
-coverage:
+---
+version: 1
+badges:
+  - name: "Build Status"
+    image: "https://img.shields.io/github/actions/workflow/status/chirag127/ZenRead-AI-Reader-And-TTS-Browser-Extension/ci.yml?style=flat-square&logo=githubactions"
+    url: "https://github.com/chirag127/ZenRead-AI-Reader-And-TTS-Browser-Extension/actions/workflows/ci.yml"
   - name: "Code Coverage"
-    run: |
-      # Example coverage command
-      echo "Placeholder for code coverage generation command."
-      # e.g., npm test -- --coverage
-
-lint:
-  - name: "Linting & Formatting"
-    run: |
-      # Example linting command using a common JS linter like ESLint or Biome
-      echo "Placeholder for linting command."
-      # e.g., npm run lint
-      # Or if using Biome:
-      # npx @biomejs/biome lint --apply ./
-      # npx @biomejs/biome format --apply ./
-
-test:
-  - name: "Unit & E2E Tests"
-    run: |
-      # Example test command using Vitest or Jest
-      echo "Placeholder for test execution command."
-      # e.g., npm test
-      # Or for Vitest:
-      # npx vitest run
-      # For E2E tests with Playwright:
-      # npx playwright test
-
-# Note: The actual commands in badges.yml are configuration for CI/CD runners
-# rather than direct execution commands. The above are illustrative placeholders.
-# In a real scenario, you'd configure the CI/CD pipeline (e.g., .github/workflows/ci.yml)
-# to generate and report these metrics, which badges.yml would then consume.
-# This badges.yml structure assumes a setup where these are used by a CI/CD tool.
-# For Shields.io badges, the CI/CD pipeline needs to be configured to output
-# coverage reports to a service like Codecov or upload results that can be
-# queried by GitHub Actions (e.g., for build status).
+    image: "https://img.shields.io/codecov/c/github/chirag127/ZenRead-AI-Reader-And-TTS-Browser-Extension?style=flat-square&logo=codecov"
+    url: "https://codecov.io/gh/chirag127/ZenRead-AI-Reader-And-TTS-Browser-Extension"
+  - name: "JavaScript"
+    image: "https://img.shields.io/badge/javascript-323330?style=flat-square&logo=javascript&logoColor=F7DF1E"
+    url: "https://github.com/chirag127/ZenRead-AI-Reader-And-TTS-Browser-Extension"
+  - name: "Browser Extension"
+    image: "https://img.shields.io/badge/browser--extension-007bff?style=flat-square&logo=google-chrome&logoColor=white"
+    url: "https://github.com/chirag127/ZenRead-AI-Reader-And-TTS-Browser-Extension"
+  - name: "AI (Gemini)"
+    image: "https://img.shields.io/badge/AI-Gemini-orange?style=flat-square&logo=google-gemini"
+    url: "https://github.com/chirag127/ZenRead-AI-Reader-And-TTS-Browser-Extension"
+  - name: "License (CC BY-NC 4.0)"
+    image: "https://img.shields.io/badge/License-CC%20BY--NC%204.0-blue?style=flat-square&logo=creativecommons"
+    url: "https://creativecommons.org/licenses/by-nc/4.0/"
+  - name: "GitHub Stars"
+    image: "https://img.shields.io/github/stars/chirag127/ZenRead-AI-Reader-And-TTS-Browser-Extension?style=flat-square&logo=github"
+    url: "https://github.com/chirag127/ZenRead-AI-Reader-And-TTS-Browser-Extension/stargazers"
